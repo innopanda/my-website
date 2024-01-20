@@ -1,0 +1,295 @@
+/* 顶部导航栏样式 */
+.top-navbar {
+    height: 20px; /* 导航栏的高度 */
+    background-color: #333; /* 导航栏的背景颜色 */
+    width: 100%; /* 导航栏的宽度 */
+    max-width: 100%; /* 最大宽度限制 */
+    margin: 10px;
+}
+
+/* 重置 body 的默认样式 */
+body {
+    margin: 0; /* 移除默认的外边距 */
+    padding: 0; /* 移除默认的内边距 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    text-align: center; /* 设置文本居中对齐 */
+    display: flex; /* 使用弹性盒子布局 */
+    flex-direction: column; /* 设置主轴方向为垂直 */
+}
+
+
+
+/* 设置图片网格的样式 */
+.gallery {
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(4, 1fr); /* 创建一个4列网格，每列宽度相同 */
+    grid-template-rows: repeat(4, 129px);  /* 增加到4行网格 */
+    grid-gap: 20px; /* 设置网格间距 */
+    width: 80%; /* 设置网格宽度为容器宽度的80% */
+    margin: 0 auto; /* 设置上下外边距为0，水平居中 */
+    padding: 0; /* 确保没有内边距 */
+   
+}
+
+/* 设置图片容器的样式 */
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 为图片下方的文本提供足够空间 */
+    grid-row: span 2; /* 每个图片容器跨越两行 */
+    margin: 0; /* 添加水平间距，根据需要调整 */
+    
+    
+}
+
+/* 大图的容器需要跨越四个行距来容纳它和它的文本 */
+.img-container.large {
+    grid-row: 2 / 6; /* 从第二行开始，跨越4行 */
+    grid-column: 1 / 3; /* 跨越前两列 */
+    width: 100%; /* 宽度自适应屏幕大小 */
+    max-width: 600px; /* 设置最大宽度，以防止图像过大 */
+    margin: 0  /* 水平居中对齐 */
+    float: left; /* 左对齐 */
+    
+}
+
+
+/* 调整图片与文字的上下间距 */
+.img-container p {
+    margin: 0; /* 调整上下边距 */ 
+}
+
+/* 设置图片的样式 */
+.img-container img {
+    max-width: 100%; /* 图片最大宽度为容器宽度 */
+    height: auto; /* 图片高度自适应 */ 
+    width: auto;
+    max-height: 100%; /* 确保图片不超过容器高度 */
+    margin-top: 25px; /* 调整上下边距 */
+    padding: 0; /* 确保没有内边距 */
+ 
+}
+
+/* 分割线容器的样式 */
+.divider-container {
+    grid-column: 1 / -1; /* 使分割线跨越所有列 */
+    width: 100%; /* 容器宽度为100% */
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* 子元素左对齐 */
+    margin: 0 auto; /* 移除外边距 */
+    padding: 0; /* 确保没有内边距 */
+   
+}
+
+/* 分割线样式 */
+.divider {
+    width: 100%; /* 分割线宽度与容器相同 */
+    text-align: left; /* 文字左对齐 */
+    margin-top: 0; /* 调整文字与分割线之间的垂直间距，根据需要微调这个值 */
+}
+
+.divider p {
+    margin-left: 0; /* 移除左边距 */
+    padding-left: 0; /* 如需要，可添加一些内边距以对齐文字 */
+    margin-top: 0; /* 调整文字与分割线之间的垂直间距，根据需要微调这个值 */
+
+}
+
+/* 分割线样式 */
+.divider hr {
+    border: 0;
+    height: 2px; /* 调整线条高度 */
+    background-color: black; /* 调整线条颜色 */
+    width: 100%; /* 调整线条宽度 */
+    max-width: 100%; /* 最大宽度限制 */
+    margin: 0 ; /* 水平居中 */
+}
+
+
+/* 设置附加文本区域的样式 */
+.larger-text {
+    grid-column: 1 / -1; /* 文本跨越所有列 */
+    margin: 0;
+    font-size: 35px;
+    text-align: center; /* 水平居中对齐文本 */
+    font-weight: 900; /* 使用更高数字值使文本更粗 */
+    font-weight: bold; /* 设置文本为粗体 */
+    letter-spacing: 2px; /* 增加字符间距以加宽文本 */
+    font-family: 'Archivo Black', sans-serif; /* 应用 "Anton" 字体 */
+    line-height: 0.5; /* 调整行间距为最小值（单倍行距） */
+}
+
+
+
+/* 设置页脚的样式，并应用Ubuntu可变字体 */
+footer {
+    height: 140px; /* 设置页脚高度 */
+    background-color: #333; /* 设置背景颜色 */
+    color: white; /* 设置字体颜色 */
+    text-align: center; /* 文本居中对齐 */
+    margin: 8px 20px;
+    line-height: 0.5px; /* 设置行高，使文字垂直居中 */
+    font-size: 80px; /* 增加字体大小 */
+    font-family: 'Archivo Black', sans-serif; /* 应用 "Anton" 字体 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+喜剧
+
+
+
+
+
+
+/* 顶部导航栏样式 */
+.top-navbar {
+    height: 20px; /* 导航栏的高度 */
+    background-color: #333; /* 导航栏的背景颜色 */
+    width: 100%; /* 导航栏的宽度 */
+    max-width: 100%; /* 最大宽度限制 */
+    margin: 10px;
+}
+
+/* 重置 body 的默认样式 */
+body {
+    margin: 0; /* 移除默认的外边距 */
+    padding: 0; /* 移除默认的内边距 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    text-align: center; /* 设置文本居中对齐 */
+    display: flex; /* 使用弹性盒子布局 */
+    flex-direction: column; /* 设置主轴方向为垂直 */
+}
+
+
+
+/* 设置整个图片网格的样式 */
+.gallery {
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(4, 1fr); /* 创建一个4列网格，每列宽度相同 */
+    grid-template-rows: repeat auto;  /* 增加到4行网格 */
+    grid-template-rows: auto; /* 行高自适应 */
+    grid-gap: 25px; /* 网格间距 */
+    max-width: 1100px; /* 最大宽度 */
+    margin: 10px auto; /* 居中对齐 */
+    padding: 0; /* 确保没有内边距 */
+   
+}
+
+/* 单独设置 pic1 大图的样式 */
+.img-container.large {
+    grid-column: span 2; /* 占据2列 */
+    grid-row: span 2; /* 占据2行 */
+    /* 其他样式，如对齐、填充等 */
+}
+
+/* pic1大图的容器需要跨越四个行距来容纳它和它的文本 */
+.img-container.large {
+    grid-area: 1 / 1 / 3 / 3; /* 从第一行第一列开始，到第三行第三列结束 */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+ 
+
+/* 所有图片设置样式 */
+.img-container img {
+    width: 100%; /* 图片宽度与容器宽度相同 */
+    height: auto; /* 图片高度自动调整 */
+
+}
+
+   
+
+/* 所有文本内容样式（适用于所有图片下的文本） */
+.text-content {
+    align-self: start; /* 文本左对齐 */
+    width: 100%; /* 文本宽度与容器宽度相同 */
+    }
+
+/* 所有图片下的文本样式 */
+.text-content p {
+    margin: 0; /* 移除外边距 */
+}
+
+/* 分隔线容器样式（适用于整个网格的分隔线） */
+.divider {
+    grid-column: 1 / -1; /* 分隔线跨越所有列 */
+    display: block; /* 分隔线作为块级元素 */
+    width: 100%; /* 分隔线宽度为100% */
+}
+
+/* 分隔线内直线的样式（适用于整个网格的分隔线） */
+.divider-line {
+    width: 100%; /* 直线宽度为100% */
+    border: 0; /* 没有边框 */
+    height: 1px; /* 直线高度为1px */ 
+    background-color: #ccc; /* 直线的背景颜色 */
+    margin: 0; /* 直线没有外边距 */
+}
+
+/* 分隔线文本的样式（适用于整个网格的分隔线） */
+.divider p {
+    margin: 0; /* 文本没有外边距 */
+    padding: 2px 0; /* 文本上下内边距 */
+}
+
+
+/* 为 pic6 到 pic9 的共同行设置样式 */
+.img-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 创建一个4列网格，每列宽度相同 */
+    grid-gap: 20px;
+    width: 300px; /* 宽度与网格一样 */
+    margin: 20px auto; /* 水平居中，与 .gallery 保持一致 */
+}
+
+/* pic6-pic9图片和文本的容器样式 */
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* 左对齐 */
+    
+}
+
+/* 设置附加文本区域的样式 */
+.larger-text {
+    grid-column: 1 / -1; /* 文本跨越所有列 */
+    margin: 0;
+    font-size: 35px;
+    text-align: center; /* 水平居中对齐文本 */
+    font-weight: 900; /* 使用更高数字值使文本更粗 */
+    font-weight: bold; /* 设置文本为粗体 */
+    letter-spacing: 2px; /* 增加字符间距以加宽文本 */
+    font-family: 'Archivo Black', sans-serif; /* 应用 "Anton" 字体 */
+    line-height: 0.5; /* 调整行间距为最小值（单倍行距） */
+}
+
+
+
+/* 设置页脚的样式，并应用Ubuntu可变字体 */
+footer {
+    height: 140px; /* 设置页脚高度 */
+    background-color: #333; /* 设置背景颜色 */
+    color: white; /* 设置字体颜色 */
+    text-align: center; /* 文本居中对齐 */
+    margin: 8px 20px;
+    line-height: 0.5px; /* 设置行高，使文字垂直居中 */
+    font-size: 80px; /* 增加字体大小 */
+    font-family: 'Archivo Black', sans-serif; /* 应用 "Anton" 字体 */
+}

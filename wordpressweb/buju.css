@@ -1,0 +1,137 @@
+/* 注释掉导航条的样式规则
+nav {
+    background-color: #333;
+    color: white;
+}
+
+/* 重置 body 的默认样式 */
+body {
+    margin: 0; /* 移除默认的外边距 */
+    padding: 0; /* 移除默认的内边距 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    text-align: center; /* 设置文本居中对齐 */
+    display: flex; /* 使用弹性盒子布局 */
+    flex-direction: column; /* 设置主轴方向为垂直 */
+}
+
+
+
+/* 设置整个图片网格的样式 */
+.gallery {
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(4, 1fr); /* 创建一个4列网格，每列宽度相同 */
+    grid-template-rows: repeat auto;  /* 增加到4行网格 */
+    grid-template-rows: auto; /* 行高自适应 */
+    grid-gap: 20px; /* 网格间距 */
+    max-width: 1100px; /* 最大宽度 */
+    margin: 10px auto; /* 居中对齐 */
+    padding-top: 5%
+   
+}
+
+/* 单独设置 pic1 大图的样式 */
+.img-container.large {
+    grid-column: span 2; /* 占据2列 */
+    grid-row: span 2; /* 占据2行 */
+    /* 其他样式，如对齐、填充等 */
+}
+
+/* pic1大图的容器需要跨越四个行距来容纳它和它的文本 */
+.img-container.large {
+    grid-area: 1 / 1 / 3 / 3; /* 从第一行第一列开始，到第三行第三列结束 */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 
+}
+ 
+
+/* 所有图片设置样式 */
+.img-container img {
+    width: 100%; /* 图片宽度与容器宽度相同 */
+    height: auto; /* 图片高度自动调整 */
+    padding-top: 5%
+   
+
+
+}
+
+
+/* 所有文本内容样式（适用于所有图片下的文本） */
+.text-content {
+    align-self: start; /* 文本左对齐 */
+    width: 100%; /* 文本宽度与容器宽度相同 */
+    padding: 0; /* 确保没有内边距 */
+    }
+
+/* 所有图片下的文本样式 */
+.text-content p {
+    margin: 0; /* 移除外边距 */
+    padding: 0; /* 确保没有内边距 */
+}
+
+/* 分隔线容器样式（适用于整个网格的分隔线） */
+.gradient-divider {
+    height: 2px; /* 设置分割线的高度 */
+    text-align: center;
+    padding: 0; /* 移除上下内边距 */
+    font-size: 0; /* 如果不需要显示文本，可以设置为0 */
+    color: white; /* 文字颜色，如果不显示文本，这个属性不重要 */
+    background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    margin:  0; /* 根据需要调整上下外边距 */
+    width: 100%; /* 分割线宽度与容器一致 */
+}
+
+/* 分隔线内直线的样式（适用于整个网格的分隔线） */
+.divider-line {
+    width: 100%; /* 直线宽度为100% */
+    height: 0.5px; /* 直线高度为0.5px */
+    background-color: rgba(0, 0, 0, 0.5); /* 使用rgba设置透明度 */
+    margin: 0; /* 直线没有外边距 */
+    border-top: 1px solid #ffffff; /* 检查是否有border属性 */
+    padding-top: 3%;
+}
+
+/* 为 pic6 到 pic9 的共同行设置样式 */
+.img-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 创建一个4列网格，每列宽度相同 */
+    grid-gap: 20px;
+    width: 300px; /* 宽度与网格一样 */
+    margin: 20px auto; /* 水平居中，与 .gallery 保持一致 */
+}
+
+/* pic6-pic9图片和文本的容器样式 */
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* 左对齐 */
+    
+}
+
+/* 设置附加文本区域的样式 */
+.larger-text {
+    grid-column: 1 / -1; /* 文本跨越所有列 */
+    margin: 0;
+    font-size: 35px;
+    text-align: center; /* 水平居中对齐文本 */
+    font-weight: 900; /* 使用更高数字值使文本更粗 */
+    font-weight: bold; /* 设置文本为粗体 */
+    letter-spacing: 2px; /* 增加字符间距以加宽文本 */
+    font-family: 'Archivo Black', sans-serif; /* 应用 "Anton" 字体 */
+    line-height: 0; /* 调整行间距为最小值（单倍行距） */
+}
+
+
+
+/* 设置页脚的样式，并应用Ubuntu可变字体 */
+footer {
+    height: 140px; /* 设置页脚高度 */
+    background-color: #333; /* 设置背景颜色 */
+    color: white; /* 设置字体颜色 */
+    text-align: center; /* 文本居中对齐 */
+    margin: 8px 20px;
+    line-height: 0.5px; /* 设置行高，使文字垂直居中 */
+    font-size: 80px; /* 增加字体大小 */
+    font-family: 'Archivo Black', sans-serif; /* 应用 "Anton" 字体 */
+}

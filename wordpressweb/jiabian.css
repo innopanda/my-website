@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container.large {
+    grid-column: span 2;
+    /* pic1占据两列 */
+    grid-row: span 2;
+    /* pic1占据两行 */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 所有图片下的文本样式 */不起作用
+.text-container p {
+    text-align: center;
+    /* 水平居中对齐文本 */
+}
+
+.gradient-divider {
+    width: 100%;
+    height: 3px;
+    /* 增加高度以便垂直居中文字 */
+    background: linear-gradient(to right, #f16795 0%, #100106 100%);
+    color: rgb(8, 0, 0);
+    font-size: 16px;
+    grid-column: 1 / -1;
+    /* 分割线跨越所有列 */
+    display: flex align-items: center;
+    /* 垂直居中 */
+    justify-content: flex-start;
+    /* 水平左对齐 */
+    padding-left: 0;
+    /* 添加一些左边距 */
+    margin: 5px
+}
+
+/* 设置附加文本区域的样式 */
+.larger-text {
+    grid-column: 1 / -1;
+    /* 文本跨越所有列 */
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    /* 水平居中对齐文本 */
+    font-weight: 850px;
+    /* 使用更高数字值使文本更粗 */
+    font-weight: bold;
+    /* 设置文本为粗体 */
+    letter-spacing: 2px;
+    /* 增加字符间距以加宽文本 */
+    font-family: 'Archivo Black', sans-serif;
+    /* 应用 "Anton" 字体 */
+    line-height: 0;
+    /* 调整行间距为最小值（单倍行距） */
+}
+
+
+
+/* 设置页脚的样式，并应用Ubuntu可变字体 */
+footer {
+    height: 140px;
+    /* 设置页脚高度 */
+    background-color: #333;
+    /* 设置背景颜色 */
+    color: white;
+    /* 设置字体颜色 */
+    text-align: center;
+    /* 文本居中对齐 */
+    margin: 1px 1px;
+    line-height: -15px;
+    /* 设置行高，使文字垂直居中 */
+    font-size: 79px;
+    /* 增加字体大小 */
+    font-family: 'Archivo Black', sans-serif;
+    /* 应用 "Anton" 字体 */
+}

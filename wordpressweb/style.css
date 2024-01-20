@@ -1,0 +1,149 @@
+
+/* 重置 body 的默认样式 */
+    body {
+        margin: 0; /* 移除默认的外边距 */
+        padding: 0; /* 移除默认的内边距 */
+        font-family: Arial, sans-serif; /* 设置字体 */
+        text-align: center; /* 设置文本居中对齐 */
+        justify-content: center; /* 水平居中对齐 */
+        align-items: center; /* 垂直居中对齐 */
+    }
+ 
+/*Container分割线样式*/
+.container {
+    width: 100%; /* 设置容器宽度为视口宽度的100% */
+    margin: auto; /* 自动边距使容器在水平方向居中 */
+}
+
+
+/* 设置分割线容器的样式 */
+.divider {
+    grid-column: 1 / -1; /* 分割线跨越所有列 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 文本左对齐 */
+    width: 100%;
+    margin: 5px 0;
+    height: auto; /* 移除固定高度，让高度自适应内容 */
+}
+
+/* 分割线中的水平线样式 */
+.divider hr {
+    border: 0; /* 移除边框 */
+    height: 1px; /* 设置高度为1像素 */
+    background-color: #ccc; /* 分割线颜色 */
+    margin: 5px 0; /* 自动边距实现水平居中 */
+    width: 100%; /* 分割线宽度为父容器的80% */
+}
+
+
+/* 分割线中的文本样式 */
+.divider p {
+    margin: 1px 0; /* 文本的上下外边距 */
+    font-size: 12px; /* 字体大小 */
+    color: #333; /* 字体颜色 */
+    text-align: left; /* 文本左对齐 */
+}
+
+
+/* 顶部图片网格样式 */
+.top-gallery {
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(4, 1fr); /* 创建一个四列网格，每列宽度相同 */
+    grid-template-rows: auto auto auto auto; /* 创建四行，行高自适应内容 */
+    grid-gap: 10px; /* 设置网格间距 */
+    width: 80%; /* 设置网格宽度为容器宽度的80% */
+    margin: 20px auto; /* 设置上下外边距为20px，水平居中 */
+}   
+
+
+/* pic1大图容器样式 */
+.top-gallery .img-container.large {
+    grid-column: 1 / 2; /* 占据第一列 */
+    grid-row: 1 / -1; /* 占据所有行 */
+    display: flex; /* 使用弹性盒子布局 */
+    flex-direction: column; /* 内容垂直排列 */
+    align-items: center; /* 子元素水平居中 */
+    text-align: center; /* 文本居中 */
+}
+
+/* pic1大图样式 */
+.top-gallery .img-container.large img {
+    max-width: 100%; /* 图片宽度最大100% */
+    height: 425px; /* 固定高度 */
+    object-fit: cover; /* 图片覆盖整个容器 */
+}
+
+
+/* pic2-pic5图片容器样式 */
+.top-gallery .img-container {
+    display: flex; /* 使用弹性盒子布局 */
+    flex-direction: column; /* 内容垂直排列 */
+    align-items: center; /* 子元素水平居中 */
+    text-align: center; /* 文本居中 */
+}
+
+
+/* pic2-pic5图片样式 */
+.top-gallery .img-container img {
+    width: 100%; /* 图片宽度填满容器 */
+    height: auto; /* 固定高度 */
+    object-fit: cover; /* 图片覆盖整个容器 */
+}
+
+/* 底部pic6-pic9图片网格样式 */
+.bottom-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* 图片顶部对齐 */
+    grid-gap: 15px; /* 保持与顶部画廊相同的间距 */
+    max-width: 900px; /* 设置最大宽度，并可根据需要调整 */
+    margin-top: 20px; /* 上边距 */
+}
+
+/* 底部pic6-pic9图片容器样式 */
+.bottom-gallery .img-container {
+    width: calc(25% - 15px); /* 四张图均分空间，减去间距 */
+    text-align: center;
+}
+
+/* 底部pic6-pic9图片样式 */
+.bottom-gallery .img-container img {
+    width: 100%;
+    height: 150px; /* 统一图片高度 */
+    object-fit: cover; /* 防止图片变形 */
+}
+
+/* 底部pic6-pic9图片下方文本样式 */
+.bottom-gallery .img-container p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #333;
+}
+
+
+
+/* 底部大段文字样式 */
+.larger-text {
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* 底部大段文字中的段落样式 */
+.larger-text p {
+    font-size: larger;
+    margin: 5px 0;
+}
+/* 页脚样式 */
+footer {
+    height: 100%;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    margin-top: 2px;
+    font-size: 16px; /* 字体大小 */
+    color: #333; /* 文字颜色 */
+    z-index: 9999; /* 设置较高的 z-index 值 */
+    /* 可以根据需要添加更多样式 */
+}
